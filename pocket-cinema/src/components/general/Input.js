@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../general/general.css'
+import './general.css'
 
 
 const Input = ({ label, type, className, value, setValue, icon, inputAttributes }) => {

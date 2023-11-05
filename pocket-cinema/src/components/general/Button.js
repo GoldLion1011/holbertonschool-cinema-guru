@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../general/general.css';
+import './general.css';
 
 
 const Button = ({ label, className, onClick, icon }) => {

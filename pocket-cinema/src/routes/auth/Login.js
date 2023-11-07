@@ -27,11 +27,11 @@ const Login = ({ username, password, setUsername, setPassword }) => {
           />
         </Form.Group>
 
-        <div className="login-button">
+        {/* <div className="login-button">
           <Button variant="primary" type="submit">
             Sign In
           </Button>
-        </div>
+        </div> */}
       </Form>
     </div>
   );

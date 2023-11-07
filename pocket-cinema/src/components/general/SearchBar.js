@@ -1,15 +1,15 @@
 import React from 'react';
+import Form from 'react-bootstrap/Form';
 import './general.css';
 
-
-const SearchBar = ({ title, setTitle }) => {
+const CustomSearchBar = ({ title, setTitle }) => {
   const handleInput = (event) => {
     const newTitle = event.target.value;
     setTitle(newTitle);
   };
 
   return (
-    <input
+    <Form.Control
       type="text"
       value={title}
       onChange={handleInput}
@@ -18,4 +18,4 @@ const SearchBar = ({ title, setTitle }) => {
   );
 };
 
-export default SearchBar;
+export default CustomSearchBar;

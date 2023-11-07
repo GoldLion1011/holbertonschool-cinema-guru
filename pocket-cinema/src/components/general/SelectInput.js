@@ -1,8 +1,8 @@
 import React from 'react';
+import Form from 'react-bootstrap/Form';
 import './general.css';
 
-
-const SelectInput = ({ label, options, className, value, setValue }) => {
+const CustomSelectInput = ({ label, options, className, value, setValue }) => {
   const handleSelect = (event) => {
     const selectedValue = event.target.value;
     setValue(selectedValue);
@@ -10,16 +10,16 @@ const SelectInput = ({ label, options, className, value, setValue }) => {
 
   return (
     <div className={`select-input-container ${className}`}>
-      {label && <label>{label}</label>}
-      <select value={value} onChange={handleSelect}>
+      {label && <Form.Label>{label}</Form.Label>}
+      <Form.Select value={value} onChange={handleSelect}>
         {options.map((option, index) => (
           <option key={index} value={option.value}>
             {option.label}
           </option>
         ))}
-      </select>
+      </Form.Select>
     </div>
   );
 };
 
-export default SelectInput;
+export default CustomSelectInput;

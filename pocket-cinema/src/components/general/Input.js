@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './general.css'
+import Form from 'react-bootstrap/Form';
+import './general.css';
 
-
-const Input = ({ label, type, className, value, setValue, icon, inputAttributes }) => {
+const CustomInput = ({ label, type, className, value, setValue, icon, inputAttributes }) => {
   const handleInput = (event) => {
     const newValue = event.target.value;
     setValue(newValue);
@@ -11,10 +11,10 @@ const Input = ({ label, type, className, value, setValue, icon, inputAttributes 
 
   return (
     <div className={`input-container ${className}`}>
-      {label && <label>{label}</label>}
+      {label && <Form.Label>{label}</Form.Label>}
       <div className="input-wrapper">
         {icon && <FontAwesomeIcon icon={icon} />}
-        <input
+        <Form.Control
           type={type}
           value={value}
           onChange={handleInput}
@@ -25,4 +25,4 @@ const Input = ({ label, type, className, value, setValue, icon, inputAttributes 
   );
 };
 
-export default Input;
+export default CustomInput;

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-// import './App.css';
+import './App.css';
+import './components/general/general.css';
 import Authentication from './routes/auth/Authentication';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
@@ -42,8 +44,8 @@ function App() {
   }, []);
 
   return (
-    <Container className="mt-5">
-      <Card>
+    <Container className='container-fluid bg-dark text-white'>
+      <Card className='container-md col-4 d-flex justify-content-center'>
         <Card.Body>
           {isLoggedIn ? (
             <p>Welcome, {userUsername}!</p>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './auth.css';
+import './auth.css';
 import Button from 'react-bootstrap/Button';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
@@ -59,11 +59,11 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
   };
 
   return (
-    <div className="auth-container">
+    <div className="auth-container justify-content-center">
       <Tabs defaultActiveKey="signin" id="auth-tabs">
         <Tab eventKey="signin" title="Sign In">
           <Button
-            className="switch-button"
+            className="switch-button btn-primary "
             variant="primary"
             onClick={handleSignInClick}
           >

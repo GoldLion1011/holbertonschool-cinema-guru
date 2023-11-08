@@ -15,19 +15,19 @@
   --color-black: #222;
 }
 
-.auth-container {
-  background-color: var(--color-black);
+..auth-container {
+  background-color: var(--color-white);
   
 }
 
-.auth body {
+/* .auth body {
   background-color: var(--color-white);
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.auth-form {
+/* .auth-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,17 +36,14 @@
   height: 361px;
   flex-shrink: 0;
   background: #FFF;
-}
+} */
 
 .button-signin {
   display: flex;
   color: var(--color-white) !important;
-  background-color: var(--color-lightred);
+  background-color: var(--color-light-red);
   justify-content: center;
   align-items: center;
-  width: 225;
-  height: 48px;
-  cursor: pointer;
 }
 
 .button-signin.active {
@@ -68,7 +65,7 @@
   background-color: var(--color-light-red);
 }
 
-.login-container {
+/* .login-container {
   display: flex;
   flex-direction: column;
   width: 450px;
@@ -92,4 +89,4 @@
 }
 .register-container {
 
-} 
+}  */

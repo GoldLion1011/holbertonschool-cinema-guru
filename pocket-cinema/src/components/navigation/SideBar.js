@@ -33,7 +33,7 @@ const SideBar = () => {
   useEffect(() => {
     const fetchActivities = async () => {
       try {
-        const response = await axios.get('/api/activity');
+        const response = await axios.get('http://localhost:8000/api/activity');
         setActivities(response.data);
       } catch (error) {
         console.error('Error fetching activities:', error);

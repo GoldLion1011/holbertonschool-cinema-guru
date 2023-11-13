@@ -12,7 +12,7 @@ const Favorites = () => {
 
   const loadFavorites = async () => {
     try {
-      const response = await axios.get('/api/titles/favorite');
+      const response = await axios.get('http://localhost:8000//api/titles/favorite');
       setMovies(response.data);
     } catch (error) {
       console.error('Error loading favorites:', error);

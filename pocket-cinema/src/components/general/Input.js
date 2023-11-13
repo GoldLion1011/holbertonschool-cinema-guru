@@ -2,7 +2,6 @@ import React from 'react';
 import 'normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import './general.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Form from 'react-bootstrap/Form';
 

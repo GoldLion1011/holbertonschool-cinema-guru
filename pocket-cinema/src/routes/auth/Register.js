@@ -1,7 +1,7 @@
 import React from 'react';
-// import './auth.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from 'react-bootstrap/Form';
+// import './auth.css';
+import Form from 'react-bootstrap/Form'; // do i need to import these before css?
 import Button from 'react-bootstrap/Button';
 
 const Register = ({ username, password, setUsername, setPassword }) => {

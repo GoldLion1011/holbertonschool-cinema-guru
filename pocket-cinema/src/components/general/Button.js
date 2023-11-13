@@ -1,9 +1,8 @@
 import React from 'react';
 import 'normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './general.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import './general.css';
 
 const CustomButton = ({ label, className, onClick, icon }) => {
   return (

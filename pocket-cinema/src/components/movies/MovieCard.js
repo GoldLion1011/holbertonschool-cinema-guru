@@ -10,10 +10,10 @@ const MovieCard = ({ movie }) => {
   useEffect(() => {
     const fetchUserLists = async () => {
       try {
-        const favoriteResponse = await axios.get(`/api/titles/favorite/${movie.imdbId}`);
+        const favoriteResponse = await axios.get(`http://localhost:8000/api/titles/favorite/${movie.imdbId}`);
         setIsFavorite(favoriteResponse.data.exists);
 
-        const watchLaterResponse = await axios.get(`/api/titles/watchlater/${movie.imdbId}`);
+        const watchLaterResponse = await axios.get(`http://localhost:8000/api/titles/watchlater/${movie.imdbId}`);
         setIsWatchLater(watchLaterResponse.data.exists);
       } catch (error) {
         console.error('Error fetching user lists:', error);

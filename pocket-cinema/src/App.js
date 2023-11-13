@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Authentication from './routes/auth/Authentication';
 import 'normalize.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css'; 
@@ -8,7 +9,6 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
 function App() {
-  // Add state using useState hook
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userUsername, setUserUsername] = useState("");
 
@@ -19,10 +19,11 @@ function App() {
     // Check if there's an accessToken
     if (accessToken) {
       // Send a post request to /api/auth/ with the authorization header
-      fetch('/api/auth/', {
+      axios ({
         method: 'POST',
+        url: 'localhost:8000/api/auth/',
         headers: {
-          'Authorization': `Bearer ${accessToken}`
+          'Authorization': `Bearer ${accessToken}`,
         }
       })
         .then((response) => {
@@ -30,7 +31,7 @@ function App() {
           if (response.ok) {
             return response.json();
           } else {
-            throw new Error('Authentication failed');
+            throw new Error('Invalid token');
           }
         })
         .then((data) => {

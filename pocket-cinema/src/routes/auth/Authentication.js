@@ -27,7 +27,7 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
     try {
       if (switchState) {
         // Logging in
-        const response = await axios.post('/api/auth/login', {
+        const response = await axios.post('http://localhost:8000/api/auth/login', {
           username,
           password,
         });
@@ -40,7 +40,7 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
         setIsLoggedIn(true);
       } else {
         // Registering
-        const response = await axios.post('/api/auth/register', {
+        const response = await axios.post('http://localhost:8000/api/auth/register', {
           username,
           password,
         });

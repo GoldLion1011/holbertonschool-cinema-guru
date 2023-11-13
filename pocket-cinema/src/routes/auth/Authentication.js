@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './auth.css';
+// import './auth.css';
 import Button from 'react-bootstrap/Button';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';

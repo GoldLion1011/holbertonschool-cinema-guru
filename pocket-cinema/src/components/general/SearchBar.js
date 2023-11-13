@@ -1,7 +1,9 @@
 import React from 'react';
+import 'normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import './general.css';
+
 import Form from 'react-bootstrap/Form';
-import './general.css';
 
 const CustomSearchBar = ({ title, setTitle }) => {
   const handleInput = (event) => {

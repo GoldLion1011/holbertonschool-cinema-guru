@@ -1,8 +1,10 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import 'normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import './general.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Form from 'react-bootstrap/Form';
-import './general.css';
 
 const CustomInput = ({ label, type, className, value, setValue, icon, inputAttributes }) => {
   const handleInput = (event) => {

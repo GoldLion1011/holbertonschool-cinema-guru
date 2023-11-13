@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import './components/general/general.css';
 import Authentication from './routes/auth/Authentication';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'normalize.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+// import './App.css'; 
+
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './movies.css';
+// import './movies.css';
 
 const Tag = ({ genre, filter, genres, setGenres }) => {
   const [selected, setSelected] = useState(false);

@@ -1,14 +1,14 @@
 import React from 'react';
-// import './auth.css';
+import './auth.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { Form, Button, Container } from 'react-bootstrap';
+// import Button from 'react-bootstrap/Button';
 
 const Login = ({ username, password, setUsername, setPassword }) => {
   return (
-    <div className="login-container">
+    <Container className="login-container">
       <Form>
-        <Form.Group>
+        <Form.Group controlId="formBasicUsername">
           <Form.Label>Username:</Form.Label>
           <Form.Control
             type="text"
@@ -18,7 +18,7 @@ const Login = ({ username, password, setUsername, setPassword }) => {
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group controlId="formBasicPassword">
           <Form.Label>Password:</Form.Label>
           <Form.Control
             type="password"
@@ -28,13 +28,13 @@ const Login = ({ username, password, setUsername, setPassword }) => {
           />
         </Form.Group>
 
-        <div className="login-button">
+        <div className="d-grid gap-2">
           <Button variant="primary" type="submit">
             Sign In
           </Button>
         </div>
       </Form>
-    </div>
+    </Container>
   );
 };
 

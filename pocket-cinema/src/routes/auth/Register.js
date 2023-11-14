@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './auth.css';
+import './auth.css';
 import Form from 'react-bootstrap/Form'; // do i need to import these before css?
 import Button from 'react-bootstrap/Button';
 

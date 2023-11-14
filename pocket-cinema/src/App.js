@@ -3,7 +3,7 @@ import axios from 'axios';
 import Authentication from './routes/auth/Authentication';
 import 'normalize.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-// import './App.css'; 
+import './App.css'; 
 
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
@@ -13,12 +13,9 @@ function App() {
   const [userUsername, setUserUsername] = useState("");
 
   useEffect(() => {
-    // Get the value of accessToken from localStorage
     const accessToken = localStorage.getItem('accessToken');
 
-    // Check if there's an accessToken
     if (accessToken) {
-      // Send a post request to /api/auth/ with the authorization header
       axios ({
         method: 'POST',
         url: 'localhost:8000/api/auth/',
@@ -27,7 +24,6 @@ function App() {
         }
       })
         .then((response) => {
-          // Check if the request was successful
           if (response.ok) {
             return response.json();
           } else {
@@ -35,7 +31,6 @@ function App() {
           }
         })
         .then((data) => {
-          // Set the isLoggedIn state to true and userUsername from the response
           setIsLoggedIn(true);
           setUserUsername(data.username);
         })
@@ -47,7 +42,7 @@ function App() {
 
   return (
     <Container className='container-fluid bg-dark text-white'>
-      <Card className='container-md col-4 d-flex justify-content-center'>
+      <Card className='container-lg col-4 d-flex justify-content-center'>
         <Card.Body>
           {isLoggedIn ? (
             <p>Welcome, {userUsername}!</p>

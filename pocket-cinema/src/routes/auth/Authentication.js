@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './auth.css';
-import Button from 'react-bootstrap/Button';
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
+import './auth.css';
+import { Button, Tabs, Tab } from 'react-bootstrap';
 import Login from './Login';
 import Register from './Register';
 
@@ -26,40 +24,33 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
 
     try {
       if (switchState) {
-        // Logging in
         const response = await axios.post('http://localhost:8000/api/auth/login', {
           username,
           password,
         });
 
-        // Store the token in localStorage
         localStorage.setItem('accessToken', response.data.accessToken);
 
-        // Set userUsername and isLoggedIn state
         setUserUsername(username);
         setIsLoggedIn(true);
       } else {
-        // Registering
         const response = await axios.post('http://localhost:8000/api/auth/register', {
           username,
           password,
         });
 
-        // Store the token in localStorage
         localStorage.setItem('accessToken', response.data.accessToken);
 
-        // Set userUsername and isLoggedIn state
         setUserUsername(username);
         setIsLoggedIn(true);
       }
     } catch (error) {
       console.error('Authentication error:', error);
-      // Handle any error or validation logic here
     }
   };
 
   return (
-    <div className="auth-container justify-content-center">
+    <div>
       <Tabs defaultActiveKey="signin" id="auth-tabs">
         <Tab eventKey="signin" title="Sign In">
           <Button
